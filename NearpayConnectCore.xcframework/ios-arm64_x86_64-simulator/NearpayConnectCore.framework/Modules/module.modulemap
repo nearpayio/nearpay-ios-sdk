@@ -1,0 +1,4 @@
+framework module NearpayConnectCore {
+  header "NearpayConnectCore-Swift.h"
+  requires objc
+}
