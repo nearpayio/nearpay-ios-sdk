@@ -252,6 +252,9 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
+/// Connect and pair Nearpay terminal then start sending Jobs and get results
+/// Connectivty is singleton class helps connect and pair Nearpay terminal and persist a profile for success connection as pair profile.
+/// and will auto load saved profile to retrieve connectivty for last paired device.
 SWIFT_CLASS("_TtC18NearpayConnectCore12Connectivity") SWIFT_AVAILABILITY(ios,introduced=13.0)
 @interface Connectivity : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

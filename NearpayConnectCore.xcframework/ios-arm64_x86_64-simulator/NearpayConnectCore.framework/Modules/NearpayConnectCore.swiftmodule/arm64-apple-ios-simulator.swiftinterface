@@ -270,8 +270,6 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
     get
   }
   @objc override dynamic public init()
-  public func showSetupUI()
-  public func hideSetupUI()
   public func startPurchaseJob(amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
   public func startRefundJob(amount: Swift.Int, transactionUUID: Swift.String, adminPin: Swift.String?, enableEditableRefundAmountUi: Swift.Bool = false, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
   public func startReversalJob(transactionUUID: Swift.String, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)

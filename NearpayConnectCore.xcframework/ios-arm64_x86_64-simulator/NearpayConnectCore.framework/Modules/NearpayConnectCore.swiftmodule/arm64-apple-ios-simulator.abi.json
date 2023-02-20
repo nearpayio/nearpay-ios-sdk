@@ -8557,6 +8557,9 @@
             "genericSig": "<τ_0_0 where τ_0_0 : NearpayConnectCore.SessoinJobDelegate>",
             "sugared_genericSig": "<Self where Self : NearpayConnectCore.SessoinJobDelegate>",
             "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -8598,6 +8601,9 @@
             "genericSig": "<τ_0_0 where τ_0_0 : NearpayConnectCore.SessoinJobDelegate>",
             "sugared_genericSig": "<Self where Self : NearpayConnectCore.SessoinJobDelegate>",
             "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           },
@@ -8639,6 +8645,9 @@
             "genericSig": "<τ_0_0 where τ_0_0 : NearpayConnectCore.SessoinJobDelegate>",
             "sugared_genericSig": "<Self where Self : NearpayConnectCore.SessoinJobDelegate>",
             "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
@@ -8772,7 +8781,8 @@
         "mangledName": "$s18NearpayConnectCore012ConnectivityB8DelegateP",
         "moduleName": "NearpayConnectCore",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ]
       },
       {
@@ -8801,7 +8811,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -9405,7 +9416,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -9515,7 +9527,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -9615,7 +9628,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC9connectedSbvp",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "accessors": [
               {
@@ -9666,46 +9680,6 @@
           },
           {
             "kind": "Function",
-            "name": "showSetupUI",
-            "printedName": "showSetupUI()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18NearpayConnectCore12ConnectivityC11showSetupUIyyF",
-            "mangledName": "$s18NearpayConnectCore12ConnectivityC11showSetupUIyyF",
-            "moduleName": "NearpayConnectCore",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "hideSetupUI",
-            "printedName": "hideSetupUI()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:18NearpayConnectCore12ConnectivityC11hideSetupUIyyF",
-            "mangledName": "$s18NearpayConnectCore12ConnectivityC11hideSetupUIyyF",
-            "moduleName": "NearpayConnectCore",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "startPurchaseJob",
             "printedName": "startPurchaseJob(amount:enableReceiptUi:enableReversal:finishTimeOut:)",
             "children": [
@@ -9747,7 +9721,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC16startPurchaseJob6amount15enableReceiptUi0I8Reversal13finishTimeOutySi_S2bSitF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9821,7 +9796,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC14startRefundJob6amount15transactionUUID8adminPin014enableEditableF8AmountUi0m7ReceiptP00M8Reversal13finishTimeOutySi_S2SSgS3bSitF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9861,7 +9837,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC16startReversalJob15transactionUUID15enableReceiptUi13finishTimeOutySS_SbSitF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9909,7 +9886,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC17startReconcileJob8adminPin15enableReceiptUi13finishTimeOutySSSg_SbSitF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9929,7 +9907,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC15cancelActiveJobyyF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9949,7 +9928,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC23connectLastPairedDeviceyyF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -9981,7 +9961,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC12connectLocal4host4portySS_SitF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -10001,7 +9982,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC12forgetPairedyyF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -10021,7 +10003,8 @@
             "mangledName": "$s18NearpayConnectCore12ConnectivityC14disconectLocalyyF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -10254,6 +10237,7 @@
         "declAttributes": [
           "AccessControl",
           "Available",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -16379,84 +16363,84 @@
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 1476,
+      "offset": 5912,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 2397,
+      "offset": 7878,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 2426,
+      "offset": 7907,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 2453,
+      "offset": 7934,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 3109,
+      "offset": 9772,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 3140,
+      "offset": 9803,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 3169,
+      "offset": 9832,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 3197,
+      "offset": 9860,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 3914,
+      "offset": 11281,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 3941,
+      "offset": 11308,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 4476,
+      "offset": 12523,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectKit\/NearpayConnectCore\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 4503,
+      "offset": 12550,
       "length": 5,
       "value": "60000"
     },
