@@ -1,4 +1,11 @@
 framework module NearpayConnectCore {
+  umbrella header "NearpayConnectCore.h"
+
+  export *
+  module * { export * }
+}
+
+module NearpayConnectCore.Swift {
   header "NearpayConnectCore-Swift.h"
   requires objc
 }
