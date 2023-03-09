@@ -97,7 +97,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func connectLocal(host: Swift.String, port: Swift.Int)
   public func forgetPaired()
   public func disconectLocal()
-  public func verison()
+  public func version()
   public func testing()
   public static var fileURL: Foundation.URL? {
     get
