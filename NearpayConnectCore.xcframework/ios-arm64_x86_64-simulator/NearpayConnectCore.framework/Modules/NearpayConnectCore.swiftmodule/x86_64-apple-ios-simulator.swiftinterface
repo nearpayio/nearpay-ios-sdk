@@ -41,7 +41,7 @@ public struct ConnectivitySetting : Swift.Codable {
     }
   }
   public enum PairedType : Swift.String, Swift.Codable {
-    case None
+    case none
     case Bluetooth
     case Local
     case Net
@@ -59,11 +59,9 @@ public enum ConnectivtyError : Swift.Error {
   case ConnectionFailedToRetry
   case RemoteDeviceIsBusy
   case RemoteDeviceIsPaused
-  public static func == (a: NearpayConnectCore.ConnectivtyError, b: NearpayConnectCore.ConnectivtyError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
+  case NoPairedDevice
+  case NotSupportedConnectivity
+  case NetworkError(Swift.String?)
 }
 public protocol SessoinJobDelegate {
   func sessionJob(didReceiveResultForPurchase result: NearpayConnectCore.JobResult<NearpayConnectCore.PurchaseResult, NearpayConnectCore.PurchaseError>)
@@ -72,55 +70,18 @@ public protocol SessoinJobDelegate {
   func sessionJob(didReceiveResultForReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationResult, NearpayConnectCore.ReconciliationError>)
 }
 public protocol ConnectivityConnectDelegate {
-  func connectivityConnect(didConnectFor: NearpayConnectCore.ConnectivitySetting)
-  func connectivityConnect(didCloseFor: NearpayConnectCore.ConnectivitySetting, withError error: Swift.Error?)
-  func connectivityConnect(didFailFor: NearpayConnectCore.ConnectivitySetting, withError error: Swift.Error?)
-  func connectivityConnect(didPause: NearpayConnectCore.ConnectivitySetting, withError error: Swift.Error?)
-  func connectivityConnect(didResume: NearpayConnectCore.ConnectivitySetting, withError error: Swift.Error?)
+  func connectivityConnect(didConnectFor setting: NearpayConnectCore.ConnectivitySetting)
+  func connectivityConnect(didCloseFor setting: NearpayConnectCore.ConnectivitySetting)
+  func connectivityConnect(didThrowErrorFor setting: NearpayConnectCore.ConnectivitySetting, withError error: NearpayConnectCore.ConnectivtyError?)
+  func connectivityConnect(didPause setting: NearpayConnectCore.ConnectivitySetting)
+  func connectivityConnect(didResume setting: NearpayConnectCore.ConnectivitySetting)
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, *)
 open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public static var shared: NearpayConnectCore.Connectivity
-  @Combine.Published @_projectedValueProperty($setting) public var setting: NearpayConnectCore.ConnectivitySetting {
-    get
-    @available(iOS 13.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, macOS 10.15, *)
-    _modify
-  }
-  public var $setting: Combine.Published<NearpayConnectCore.ConnectivitySetting>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  @Combine.Published @_projectedValueProperty($showUI) public var showUI: Swift.Bool {
-    get
-    @available(iOS 13.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, macOS 10.15, *)
-    _modify
-  }
-  public var $showUI: Combine.Published<Swift.Bool>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  @Combine.Published @_projectedValueProperty($pauseMode) public var pauseMode: Swift.Bool {
-    get
-    @available(iOS 13.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, macOS 10.15, *)
-    _modify
-  }
-  public var $pauseMode: Combine.Published<Swift.Bool>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  public var bluetoothScanDelegate: NearpayConnectCore.BluetoothScanDelegate?
   public var sessionDelegate: NearpayConnectCore.SessoinJobDelegate?
   public var connectDelegate: NearpayConnectCore.ConnectivityConnectDelegate?
-  public var connected: Swift.Bool {
+  public var paired: NearpayConnectCore.ConnectivitySetting.PairedType {
     get
   }
   public var busy: Swift.Bool {
@@ -136,10 +97,8 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func connectLocal(host: Swift.String, port: Swift.Int)
   public func forgetPaired()
   public func disconectLocal()
-  public func disconnectBluetooth()
-  public func scanBluetoothDevices()
-  public func stopBluetoothScan()
-  public func connectBluetoothDevice(device: NearpayConnectCore.BluetoothDevice)
+  public func verison()
+  public func testing()
   public static var fileURL: Foundation.URL? {
     get
   }
@@ -441,8 +400,6 @@ extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.RawRepre
 extension NearpayConnectCore.ConnectivitySetting.PairedType : Swift.Equatable {}
 extension NearpayConnectCore.ConnectivitySetting.PairedType : Swift.Hashable {}
 extension NearpayConnectCore.ConnectivitySetting.PairedType : Swift.RawRepresentable {}
-extension NearpayConnectCore.ConnectivtyError : Swift.Equatable {}
-extension NearpayConnectCore.ConnectivtyError : Swift.Hashable {}
 extension NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.Equatable {}
 extension NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.Hashable {}
 extension NearpayConnectCore.ReconcileOutcomes : Swift.Equatable {}
