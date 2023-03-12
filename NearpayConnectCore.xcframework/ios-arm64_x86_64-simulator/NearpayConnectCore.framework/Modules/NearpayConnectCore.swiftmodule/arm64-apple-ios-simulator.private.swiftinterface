@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NearpayConnectCore
+// swift-module-flags: -target arm64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NearpayConnectCore
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
 import CoreBluetooth
@@ -11,47 +11,19 @@ import Swift
 import SwiftUI
 import _Concurrency
 import _StringProcessing
-public struct BluetoothDevice : Swift.Identifiable {
-  public let id: Swift.Int
-  public let rssi: Swift.Int
-  public let uuid: Foundation.UUID
-  public let peripheral: CoreBluetooth.CBPeripheral
-  public let name: Swift.String
-  public let pairingMode: Swift.Bool
-  public typealias ID = Swift.Int
+public enum JobResult<Result, Failure> where Failure : Swift.Error {
+  case result(Result)
+  case failure(Failure)
 }
-public protocol BluetoothScanDelegate {
-  func bluetoothScan(didStopFor serviceId: Swift.String)
-  func bluetoothScan(didStartFor serviceId: Swift.String)
-  func bluetoothScan(didFoundDeviceFor serviceId: Swift.String, device: NearpayConnectCore.BluetoothDevice)
-  func bluetoothScan(didRefreshListFor serviceId: Swift.String, list: [NearpayConnectCore.BluetoothDevice])
+public struct JobMessageResponse : Swift.Codable {
+  public let status: Swift.Int
+  public let message: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct ConnectivitySetting : Swift.Codable {
-  public var bluetooth: NearpayConnectCore.Connection
-  public var tcp: NearpayConnectCore.Connection
-  public var paired: NearpayConnectCore.ConnectivitySetting.PairedType
-  public enum ConnectionType : Swift.String, Swift.Codable {
-    case Bluetooth
-    case Local
-    case Net
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum PairedType : Swift.String, Swift.Codable {
-    case none
-    case Bluetooth
-    case Local
-    case Net
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public static let `default`: NearpayConnectCore.ConnectivitySetting
+public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let status: T
+  public let transactionReceipts: [NearpayConnectCore.TransactionReceipt]
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -111,29 +83,39 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
 extension Foundation.Data {
   public func hexEncodedString() -> Swift.String
 }
-public struct Connection : Swift.Codable {
-  public var name: Swift.String
-  public var addressInfo: [NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.String]
-  public var connected: Swift.Bool
-  public var retries: Swift.Int
-  public enum AddressInfoKeysEnum : Swift.CaseIterable, Swift.Codable {
-    case host
-    case port
-    case uuid
-    case extra_uuid
-    case device_name
-    public static func == (a: NearpayConnectCore.Connection.AddressInfoKeysEnum, b: NearpayConnectCore.Connection.AddressInfoKeysEnum) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public typealias AllCases = [NearpayConnectCore.Connection.AddressInfoKeysEnum]
-    public static var allCases: [NearpayConnectCore.Connection.AddressInfoKeysEnum] {
-      get
-    }
-    public func encode(to encoder: Swift.Encoder) throws
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: Swift.Decoder) throws
+public enum RefundOutcomes : Swift.Int, Swift.Codable {
+  case APPROVED
+  case DECLIEND
+  case REJECTED
+  case AUTH_FAILED
+  case INVALID
+  case GENERAL_ERROR
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
   }
+}
+public enum RefundResult {
+  case APPROVED([NearpayConnectCore.TransactionReceipt])
+  case DECLIEND([NearpayConnectCore.TransactionReceipt])
+}
+public enum RefundError : Swift.Error {
+  case REJECTED(Swift.String)
+  case AUTH_FAILED(Swift.String)
+  case INVALID(Swift.String)
+  case GENERAL_ERROR(Swift.String?)
+  public func message() -> Swift.String
+}
+public struct RefundPayload : Swift.Codable {
+  public let transactionUUID: Swift.String
+  public let customerReferenceNumber: Swift.String
+  public let amount: Swift.Double
+  public let enableEditableRefundAmountUi: Swift.Bool
+  public let enableReceiptUi: Swift.Bool
+  public let enableReversal: Swift.Bool
+  public let finishTimeOut: Swift.Int
+  public let adminPin: Swift.String
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -183,114 +165,31 @@ public struct ReconciliationReceipt : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct LabelField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 public struct NameField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum JobResult<Result, Failure> where Failure : Swift.Error {
-  case result(Result)
-  case failure(Failure)
-}
-public struct JobMessageResponse : Swift.Codable {
-  public let status: Swift.Int
-  public let message: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
-  public let status: T
-  public let transactionReceipts: [NearpayConnectCore.TransactionReceipt]
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct LocalizationField : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public enum ReconciliationResult {
-  case BALANCED(NearpayConnectCore.ReconciliationReceipt)
-  case NOT_BALANCED(NearpayConnectCore.ReconciliationReceipt)
-}
-public enum ReconciliationError : Swift.Error {
-  case REJECTED(Swift.String)
-  case AUTH_FAILED(Swift.String)
-  case INVALID(Swift.String)
-  case GENERAL_ERROR(Swift.String)
-  public func message() -> Swift.String
-}
-public enum ReconcileOutcomes : Swift.Int, Swift.Codable {
-  case BALANCED
-  case NOT_BALANCED
-  case REJECTED
-  case AUTH_FAILED
-  case INVALID
-  case GENERAL_ERROR
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct ReconcilePayload : Swift.Codable {
-  public let enableReceiptUi: Swift.Bool
-  public let finishTimeOut: Swift.Int
-  public let adminPin: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct ReconciliationReceiptPayload : Swift.Codable {
-  public let status: NearpayConnectCore.ReconcileOutcomes
-  public let reconcileReceipt: NearpayConnectCore.ReconciliationReceipt
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct Merchant : Swift.Codable {
-  public let id: Swift.String?
-  public let name: NearpayConnectCore.LocalizationField?
-  public let address: NearpayConnectCore.LocalizationField?
-  public let category_code: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public enum RefundOutcomes : Swift.Int, Swift.Codable {
-  case APPROVED
-  case DECLIEND
-  case REJECTED
-  case AUTH_FAILED
-  case INVALID
-  case GENERAL_ERROR
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum RefundResult {
-  case APPROVED([NearpayConnectCore.TransactionReceipt])
-  case DECLIEND([NearpayConnectCore.TransactionReceipt])
-}
-public enum RefundError : Swift.Error {
+public enum ReversalError : Swift.Error {
   case REJECTED(Swift.String)
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String?)
   public func message() -> Swift.String
 }
-public struct RefundPayload : Swift.Codable {
-  public let transactionUUID: Swift.String
-  public let customerReferenceNumber: Swift.String
-  public let amount: Swift.Double
-  public let enableEditableRefundAmountUi: Swift.Bool
-  public let enableReceiptUi: Swift.Bool
-  public let enableReversal: Swift.Bool
-  public let finishTimeOut: Swift.Int
-  public let adminPin: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
+  case FINISHED
+  case REJECTED
+  case AUTH_FAILED
+  case INVALID
+  case GENERAL_ERROR
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct ReversalFinished {
+  public let receipts: [NearpayConnectCore.TransactionReceipt]
 }
 public enum PurchaseOutcomes : Swift.Int, Swift.Codable {
   case APPROVED
@@ -324,6 +223,54 @@ public struct PurchasePayload : Swift.Codable {
   public let finishTimeOut: Swift.Int
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
+}
+public struct ConnectivitySetting : Swift.Codable {
+  public var bluetooth: NearpayConnectCore.Connection
+  public var tcp: NearpayConnectCore.Connection
+  public var paired: NearpayConnectCore.ConnectivitySetting.PairedType
+  public enum ConnectionType : Swift.String, Swift.Codable {
+    case Bluetooth
+    case Local
+    case Net
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PairedType : Swift.String, Swift.Codable {
+    case none
+    case Bluetooth
+    case Local
+    case Net
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static let `default`: NearpayConnectCore.ConnectivitySetting
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LocalizationField : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct BluetoothDevice : Swift.Identifiable {
+  public let id: Swift.Int
+  public let rssi: Swift.Int
+  public let uuid: Foundation.UUID
+  public let peripheral: CoreBluetooth.CBPeripheral
+  public let name: Swift.String
+  public let pairingMode: Swift.Bool
+  public typealias ID = Swift.Int
+}
+public protocol BluetoothScanDelegate {
+  func bluetoothScan(didStopFor serviceId: Swift.String)
+  func bluetoothScan(didStartFor serviceId: Swift.String)
+  func bluetoothScan(didFoundDeviceFor serviceId: Swift.String, device: NearpayConnectCore.BluetoothDevice)
+  func bluetoothScan(didRefreshListFor serviceId: Swift.String, list: [NearpayConnectCore.BluetoothDevice])
 }
 public struct TransactionReceipt : Swift.Codable {
   public let receipt_id: Swift.String?
@@ -372,15 +319,50 @@ public struct TransactionReceipt : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum ReversalError : Swift.Error {
+public struct Connection : Swift.Codable {
+  public var name: Swift.String
+  public var addressInfo: [NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.String]
+  public var connected: Swift.Bool
+  public var retries: Swift.Int
+  public enum AddressInfoKeysEnum : Swift.CaseIterable, Swift.Codable {
+    case host
+    case port
+    case uuid
+    case extra_uuid
+    case device_name
+    public static func == (a: NearpayConnectCore.Connection.AddressInfoKeysEnum, b: NearpayConnectCore.Connection.AddressInfoKeysEnum) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public typealias AllCases = [NearpayConnectCore.Connection.AddressInfoKeysEnum]
+    public static var allCases: [NearpayConnectCore.Connection.AddressInfoKeysEnum] {
+      get
+    }
+    public func encode(to encoder: Swift.Encoder) throws
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LabelField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum ReconciliationResult {
+  case BALANCED(NearpayConnectCore.ReconciliationReceipt)
+  case NOT_BALANCED(NearpayConnectCore.ReconciliationReceipt)
+}
+public enum ReconciliationError : Swift.Error {
   case REJECTED(Swift.String)
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
-  case GENERAL_ERROR(Swift.String?)
+  case GENERAL_ERROR(Swift.String)
   public func message() -> Swift.String
 }
-public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
-  case FINISHED
+public enum ReconcileOutcomes : Swift.Int, Swift.Codable {
+  case BALANCED
+  case NOT_BALANCED
   case REJECTED
   case AUTH_FAILED
   case INVALID
@@ -391,9 +373,36 @@ public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
     get
   }
 }
-public struct ReversalFinished {
-  public let receipts: [NearpayConnectCore.TransactionReceipt]
+public struct ReconcilePayload : Swift.Codable {
+  public let enableReceiptUi: Swift.Bool
+  public let finishTimeOut: Swift.Int
+  public let adminPin: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
+public struct ReconciliationReceiptPayload : Swift.Codable {
+  public let status: NearpayConnectCore.ReconcileOutcomes
+  public let reconcileReceipt: NearpayConnectCore.ReconciliationReceipt
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Merchant : Swift.Codable {
+  public let id: Swift.String?
+  public let name: NearpayConnectCore.LocalizationField?
+  public let address: NearpayConnectCore.LocalizationField?
+  public let category_code: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension NearpayConnectCore.RefundOutcomes : Swift.Equatable {}
+extension NearpayConnectCore.RefundOutcomes : Swift.Hashable {}
+extension NearpayConnectCore.RefundOutcomes : Swift.RawRepresentable {}
+extension NearpayConnectCore.ReversaldOutcomes : Swift.Equatable {}
+extension NearpayConnectCore.ReversaldOutcomes : Swift.Hashable {}
+extension NearpayConnectCore.ReversaldOutcomes : Swift.RawRepresentable {}
+extension NearpayConnectCore.PurchaseOutcomes : Swift.Equatable {}
+extension NearpayConnectCore.PurchaseOutcomes : Swift.Hashable {}
+extension NearpayConnectCore.PurchaseOutcomes : Swift.RawRepresentable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.Equatable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.Hashable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.RawRepresentable {}
@@ -405,12 +414,3 @@ extension NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.Hashable {}
 extension NearpayConnectCore.ReconcileOutcomes : Swift.Equatable {}
 extension NearpayConnectCore.ReconcileOutcomes : Swift.Hashable {}
 extension NearpayConnectCore.ReconcileOutcomes : Swift.RawRepresentable {}
-extension NearpayConnectCore.RefundOutcomes : Swift.Equatable {}
-extension NearpayConnectCore.RefundOutcomes : Swift.Hashable {}
-extension NearpayConnectCore.RefundOutcomes : Swift.RawRepresentable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.Equatable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.Hashable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.RawRepresentable {}
-extension NearpayConnectCore.ReversaldOutcomes : Swift.Equatable {}
-extension NearpayConnectCore.ReversaldOutcomes : Swift.Hashable {}
-extension NearpayConnectCore.ReversaldOutcomes : Swift.RawRepresentable {}
