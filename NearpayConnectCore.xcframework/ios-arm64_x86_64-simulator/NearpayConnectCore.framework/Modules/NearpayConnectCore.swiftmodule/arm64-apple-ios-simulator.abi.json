@@ -1930,7 +1930,7 @@
           {
             "kind": "Function",
             "name": "connectLocal",
-            "printedName": "connectLocal(host:port:)",
+            "printedName": "connectLocal(host:port:timeoutInSeconds:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1948,11 +1948,17 @@
                 "name": "Int",
                 "printedName": "Swift.Int",
                 "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Func",
-            "usr": "s:18NearpayConnectCore12ConnectivityC12connectLocal4host4portySS_SitF",
-            "mangledName": "$s18NearpayConnectCore12ConnectivityC12connectLocal4host4portySS_SitF",
+            "usr": "s:18NearpayConnectCore12ConnectivityC12connectLocal4host4port16timeoutInSecondsySS_S2itF",
+            "mangledName": "$s18NearpayConnectCore12ConnectivityC12connectLocal4host4port16timeoutInSecondsySS_S2itF",
             "moduleName": "NearpayConnectCore",
             "declAttributes": [
               "AccessControl",
@@ -11813,6 +11819,92 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "timeoutInSecounds",
+            "printedName": "timeoutInSecounds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivp",
+            "mangledName": "$s18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivp",
+            "moduleName": "NearpayConnectCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivg",
+                "mangledName": "$s18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivg",
+                "moduleName": "NearpayConnectCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivs",
+                "mangledName": "$s18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivs",
+                "moduleName": "NearpayConnectCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivM",
+                "mangledName": "$s18NearpayConnectCore10ConnectionV17timeoutInSecoundsSivM",
+                "moduleName": "NearpayConnectCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "TypeDecl",
             "name": "AddressInfoKeysEnum",
             "printedName": "AddressInfoKeysEnum",
@@ -14603,98 +14695,98 @@
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 8446,
+      "offset": 8467,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 8648,
+      "offset": 8669,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 8709,
+      "offset": 8730,
       "length": 29,
       "value": "\"nearpayconnectcore.settings\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 10902,
+      "offset": 10923,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 10931,
+      "offset": 10952,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 10958,
+      "offset": 10979,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 12795,
+      "offset": 12816,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 12826,
+      "offset": 12847,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 12855,
+      "offset": 12876,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 12883,
+      "offset": 12904,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 14303,
+      "offset": 14324,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 14330,
+      "offset": 14351,
       "length": 5,
       "value": "60000"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 15544,
+      "offset": 15565,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 15571,
+      "offset": 15592,
       "length": 5,
       "value": "60000"
     },
@@ -15140,9 +15232,16 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 319,
+      "length": 2,
+      "value": "1"
+    },
+    {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Core\/Websocket.swift",
       "kind": "BooleanLiteral",
-      "offset": 1195,
+      "offset": 1248,
       "length": 5,
       "value": "false"
     },

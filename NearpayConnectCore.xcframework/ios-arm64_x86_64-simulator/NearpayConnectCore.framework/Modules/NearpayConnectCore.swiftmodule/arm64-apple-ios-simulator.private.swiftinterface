@@ -66,7 +66,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
   public func cancelActiveJob()
   public func connectLastPairedDevice()
-  public func connectLocal(host: Swift.String, port: Swift.Int)
+  public func connectLocal(host: Swift.String, port: Swift.Int, timeoutInSeconds: Swift.Int)
   public func forgetPaired()
   public func disconectLocal()
   public func version()
@@ -324,6 +324,7 @@ public struct Connection : Swift.Codable {
   public var addressInfo: [NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.String]
   public var connected: Swift.Bool
   public var retries: Swift.Int
+  public var timeoutInSecounds: Swift.Int
   public enum AddressInfoKeysEnum : Swift.CaseIterable, Swift.Codable {
     case host
     case port
