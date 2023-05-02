@@ -30,27 +30,41 @@ public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.D
 public enum ConnectivtyError : Swift.Error {
   case ConnectionFailedToRetry
   case RemoteDeviceIsBusy
+  case UnautherizedReply
   case RemoteDeviceIsPaused
   case NoPairedDevice
   case NotSupportedConnectivity
   case NetworkError(Swift.String?)
 }
 public protocol SessoinJobDelegate {
-  func sessionJob(didReceiveResultForPurchase result: NearpayConnectCore.JobResult<NearpayConnectCore.PurchaseResult, NearpayConnectCore.PurchaseError>)
-  func sessionJob(didReceiveResultForRefund result: NearpayConnectCore.JobResult<NearpayConnectCore.RefundResult, NearpayConnectCore.RefundError>)
-  func sessionJob(didReceiveResultForReversal result: NearpayConnectCore.JobResult<NearpayConnectCore.ReversalFinished, NearpayConnectCore.ReversalError>)
-  func sessionJob(didReceiveResultForReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationResult, NearpayConnectCore.ReconciliationError>)
+  func sessionJob(didReceiveResultForPurchase result: NearpayConnectCore.JobResult<NearpayConnectCore.PurchaseResult, NearpayConnectCore.PurchaseError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForRefund result: NearpayConnectCore.JobResult<NearpayConnectCore.RefundResult, NearpayConnectCore.RefundError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForReversal result: NearpayConnectCore.JobResult<NearpayConnectCore.ReversalFinished, NearpayConnectCore.ReversalError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationResult, NearpayConnectCore.ReconciliationError>, forJob jobId: Foundation.UUID)
 }
 public protocol ConnectivityConnectDelegate {
   func connectivityConnect(didConnectFor setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didCloseFor setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didThrowErrorFor setting: NearpayConnectCore.ConnectivitySetting, withError error: NearpayConnectCore.ConnectivtyError?)
+  func connectivityConnect(didRetryToConnectFor setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didPause setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didResume setting: NearpayConnectCore.ConnectivitySetting)
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, *)
 open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public static var shared: NearpayConnectCore.Connectivity
+  @Combine.Published @_projectedValueProperty($setting) public var setting: NearpayConnectCore.ConnectivitySetting {
+    get
+    @available(iOS 13.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, macOS 10.15, *)
+    _modify
+  }
+  public var $setting: Combine.Published<NearpayConnectCore.ConnectivitySetting>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
   public var sessionDelegate: NearpayConnectCore.SessoinJobDelegate?
   public var connectDelegate: NearpayConnectCore.ConnectivityConnectDelegate?
   public var paired: NearpayConnectCore.ConnectivitySetting.PairedType {
@@ -60,10 +74,16 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
     get
   }
   @objc override dynamic public init()
-  public func startPurchaseJob(amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
-  public func startRefundJob(amount: Swift.Int, transactionUUID: Swift.String, adminPin: Swift.String?, enableEditableRefundAmountUi: Swift.Bool = false, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
-  public func startReversalJob(transactionUUID: Swift.String, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
-  public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 60000)
+  @discardableResult
+  public func startPurchaseJob(amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
+  public func startPurchaseJob(jobUUID: Foundation.UUID, amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false)
+  @discardableResult
+  public func startRefundJob(amount: Swift.Int, transactionUUID: Swift.String, adminPin: Swift.String?, enableEditableRefundAmountUi: Swift.Bool = false, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
+  @discardableResult
+  public func startReversalJob(transactionUUID: Swift.String, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
+  @discardableResult
+  public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
+  public func recallActiveJob()
   public func cancelActiveJob()
   public func connectLastPairedDevice()
   public func connectLocal(host: Swift.String, port: Swift.Int, timeoutInSeconds: Swift.Int)
@@ -82,6 +102,12 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
 }
 extension Foundation.Data {
   public func hexEncodedString() -> Swift.String
+}
+@available(iOS 13.0, macOS 10.15, *)
+extension NearpayConnectCore.Connectivity : Foundation.URLSessionWebSocketDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didOpenWithProtocol protocol: Swift.String?)
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didCloseWith closeCode: Foundation.URLSessionWebSocketTask.CloseCode, reason: Foundation.Data?)
 }
 public enum RefundOutcomes : Swift.Int, Swift.Codable {
   case APPROVED
@@ -113,6 +139,7 @@ public struct RefundPayload : Swift.Codable {
   public let amount: Swift.Double
   public let enableEditableRefundAmountUi: Swift.Bool
   public let enableReceiptUi: Swift.Bool
+  public let enableUiDismiss: Swift.Bool?
   public let enableReversal: Swift.Bool
   public let finishTimeOut: Swift.Int
   public let adminPin: Swift.String
@@ -166,6 +193,8 @@ public struct ReconciliationReceipt : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct NameField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let name: NearpayConnectCore.LocalizationField?
+  public let id: T?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -219,6 +248,7 @@ public struct PurchasePayload : Swift.Codable {
   public let customerReferenceNumber: Swift.String
   public let amount: Swift.Double
   public let enableReceiptUi: Swift.Bool
+  public let enableUiDismiss: Swift.Bool?
   public let enableReversal: Swift.Bool
   public let finishTimeOut: Swift.Int
   public func encode(to encoder: Swift.Encoder) throws
@@ -254,6 +284,8 @@ public struct ConnectivitySetting : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct LocalizationField : Swift.Codable {
+  public let arabic: Swift.String?
+  public let english: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -322,7 +354,6 @@ public struct TransactionReceipt : Swift.Codable {
 public struct Connection : Swift.Codable {
   public var name: Swift.String
   public var addressInfo: [NearpayConnectCore.Connection.AddressInfoKeysEnum : Swift.String]
-  public var connected: Swift.Bool
   public var retries: Swift.Int
   public var timeoutInSecounds: Swift.Int
   public enum AddressInfoKeysEnum : Swift.CaseIterable, Swift.Codable {
@@ -331,6 +362,7 @@ public struct Connection : Swift.Codable {
     case uuid
     case extra_uuid
     case device_name
+    case pathPrefix
     public static func == (a: NearpayConnectCore.Connection.AddressInfoKeysEnum, b: NearpayConnectCore.Connection.AddressInfoKeysEnum) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public typealias AllCases = [NearpayConnectCore.Connection.AddressInfoKeysEnum]
@@ -347,6 +379,8 @@ public struct Connection : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct LabelField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let label: NearpayConnectCore.LocalizationField?
+  public let value: T?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -376,6 +410,7 @@ public enum ReconcileOutcomes : Swift.Int, Swift.Codable {
 }
 public struct ReconcilePayload : Swift.Codable {
   public let enableReceiptUi: Swift.Bool
+  public let enableUiDismiss: Swift.Bool?
   public let finishTimeOut: Swift.Int
   public let adminPin: Swift.String
   public func encode(to encoder: Swift.Encoder) throws
