@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NearpayConnectCore-Swift.h</key>
 		<data>
-		tJw4XINXxKJVG2/iZIiEk+XOBxE=
+		19fhDzh8tYAidjdXNxP5rAZlNmY=
 		</data>
 		<key>Headers/NearpayConnectCore.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TmssHEr4yIcgrds2DJxn26146RI=
+		ORY6ii0AfD8XMPxyWrHL2a3KVrA=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		DE8s3DmWzkyhNYz4a/iRlurbgww=
+		DQRoQBHgM6X/0H5G+DtNbv/TpvI=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		WFEQI849tt+IUkyHykOJ4oQVgVM=
+		e/TsL3HBWgGYDQDMTSmsJlW9MGA=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		2oA2pBtJdXB357VOzYa5ib0njVQ=
+		8/iH00MnGzT0ThHGGZ6qrXtYdf8=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		WFEQI849tt+IUkyHykOJ4oQVgVM=
+		e/TsL3HBWgGYDQDMTSmsJlW9MGA=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kuvGdjEmZTHtqAoEXLVh8AwyoGo=
+		T7DL4vRKg2LbfkJGJ0BGB/UBWaY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FgMbPPPdnzYvV//vVU26xLfJGyLw8SsBk77qgEhI0JE=
+			RFWF07SuwB0ovBj7A7EMF9Z0ZmwK+HXXGwqOmx6TibY=
 			</data>
 		</dict>
 		<key>Headers/NearpayConnectCore.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kWqR5Lt8siQeusZZtUoedbLANShjqAHuY+bMV/Tt3BY=
+			kfYqYb62jrENrE3cBe0LexQRSbYDn5t45wXfTgrtVZc=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kQ1c/Pua2zSM73AcJTli+sc3wpmORtVZJaBApsjF+xM=
+			6w45B24omV6KqXfs84JSmb8y+sVNNUQ98diaQraAOV8=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kPxH6vjdEpfwEqR7svm6SvwTYtuFHmrTTIUO3TKH6iQ=
+			0bTLsCT43IEj+6sJ1IUpeG3kvB/Wrk9QGLg5vfhMr2E=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kQ1c/Pua2zSM73AcJTli+sc3wpmORtVZJaBApsjF+xM=
+			6w45B24omV6KqXfs84JSmb8y+sVNNUQ98diaQraAOV8=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZNhhUxq2XRTgzi7IEkT08p0O88xw8BHkSXQVIwARgPc=
+			UeHNB/kgi0sGmPyCcxJsmelUBaddWU1YTnhinpN/atQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

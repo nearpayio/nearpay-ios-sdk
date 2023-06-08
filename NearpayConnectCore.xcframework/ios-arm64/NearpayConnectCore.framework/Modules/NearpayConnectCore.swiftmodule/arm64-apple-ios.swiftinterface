@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NearpayConnectCore
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
@@ -18,14 +18,14 @@ public enum JobResult<Result, Failure> where Failure : Swift.Error {
 public struct JobMessageResponse : Swift.Codable {
   public let status: Swift.Int
   public let message: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public let status: T
   public let transactionReceipts: [NearpayConnectCore.TransactionReceipt]
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum ConnectivtyError : Swift.Error {
   case ConnectionFailedToRetry
@@ -65,8 +65,8 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  public var sessionDelegate: NearpayConnectCore.SessoinJobDelegate?
-  public var connectDelegate: NearpayConnectCore.ConnectivityConnectDelegate?
+  public var sessionDelegate: (any NearpayConnectCore.SessoinJobDelegate)?
+  public var connectDelegate: (any NearpayConnectCore.ConnectivityConnectDelegate)?
   public var paired: NearpayConnectCore.ConnectivitySetting.PairedType {
     get
   }
@@ -85,6 +85,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
   public func recallActiveJob()
   public func cancelActiveJob()
+  public func dismissActiveJobResult()
   public func connectLastPairedDevice()
   public func connectLocal(host: Swift.String, port: Swift.Int, timeoutInSeconds: Swift.Int)
   public func forgetPaired()
@@ -143,8 +144,8 @@ public struct RefundPayload : Swift.Codable {
   public let enableReversal: Swift.Bool
   public let finishTimeOut: Swift.Int
   public let adminPin: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ReconciliationReceipt : Swift.Codable {
   public let id: Swift.String
@@ -161,42 +162,42 @@ public struct ReconciliationReceipt : Swift.Codable {
     public let purchase_reversal: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
     public let refund_reversal: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
     public let total: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public struct ReconciliationSchemes : Swift.Codable {
     public let name: NearpayConnectCore.LabelField<Swift.String>?
     public let pos: NearpayConnectCore.ReconciliationReceipt.ReconciliationSchemesDetails?
     public let host: NearpayConnectCore.ReconciliationReceipt.ReconciliationSchemesDetails?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public struct ReconciliationSchemesDetails : Swift.Codable {
     public let debit: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
     public let credit: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
     public let total: NearpayConnectCore.ReconciliationReceipt.ReconciliationLabelField?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public struct ReconciliationLabelField : Swift.Codable {
     public let label: NearpayConnectCore.LocalizationField?
     public let total: Swift.String?
     public let count: Swift.Int?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public let merchant: NearpayConnectCore.Merchant
   public let card_acceptor_terminal_id: Swift.String
   public let system_trace_audit_number: Swift.String
   public let pos_software_version_number: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct NameField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public let name: NearpayConnectCore.LocalizationField?
   public let id: T?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum ReversalError : Swift.Error {
   case REJECTED(Swift.String)
@@ -251,8 +252,8 @@ public struct PurchasePayload : Swift.Codable {
   public let enableUiDismiss: Swift.Bool?
   public let enableReversal: Swift.Bool
   public let finishTimeOut: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ConnectivitySetting : Swift.Codable {
   public var bluetooth: NearpayConnectCore.Connection
@@ -280,14 +281,14 @@ public struct ConnectivitySetting : Swift.Codable {
     }
   }
   public static let `default`: NearpayConnectCore.ConnectivitySetting
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct LocalizationField : Swift.Codable {
   public let arabic: Swift.String?
   public let english: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct BluetoothDevice : Swift.Identifiable {
   public let id: Swift.Int
@@ -348,8 +349,8 @@ public struct TransactionReceipt : Swift.Codable {
   public let created_at: Swift.String?
   public let updated_at: Swift.String?
   public let qr_code: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Connection : Swift.Codable {
   public var name: Swift.String
@@ -369,20 +370,20 @@ public struct Connection : Swift.Codable {
     public static var allCases: [NearpayConnectCore.Connection.AddressInfoKeysEnum] {
       get
     }
-    public func encode(to encoder: Swift.Encoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
     public var hashValue: Swift.Int {
       get
     }
-    public init(from decoder: Swift.Decoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct LabelField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public let label: NearpayConnectCore.LocalizationField?
   public let value: T?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum ReconciliationResult {
   case BALANCED(NearpayConnectCore.ReconciliationReceipt)
@@ -413,22 +414,22 @@ public struct ReconcilePayload : Swift.Codable {
   public let enableUiDismiss: Swift.Bool?
   public let finishTimeOut: Swift.Int
   public let adminPin: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ReconciliationReceiptPayload : Swift.Codable {
   public let status: NearpayConnectCore.ReconcileOutcomes
   public let reconcileReceipt: NearpayConnectCore.ReconciliationReceipt
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Merchant : Swift.Codable {
   public let id: Swift.String?
   public let name: NearpayConnectCore.LocalizationField?
   public let address: NearpayConnectCore.LocalizationField?
   public let category_code: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension NearpayConnectCore.RefundOutcomes : Swift.Equatable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.Hashable {}
