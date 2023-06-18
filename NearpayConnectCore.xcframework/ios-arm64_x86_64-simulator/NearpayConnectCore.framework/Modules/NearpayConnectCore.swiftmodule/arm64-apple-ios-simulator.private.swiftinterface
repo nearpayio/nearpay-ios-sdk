@@ -88,6 +88,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func dismissActiveJobResult()
   public func connectLastPairedDevice()
   public func connectLocal(host: Swift.String, port: Swift.Int, timeoutInSeconds: Swift.Int)
+  public func updateLocalPairedAddress(host: Swift.String, port: Swift.String)
   public func forgetPaired()
   public func disconectLocal()
   public func version()

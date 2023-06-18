@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4NFGib/hoIWeh+eUMOt7l8UO/Y4=
+		ln9M/6V+EerZyM67/obdB8RBuMc=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		N5Fo/NbbHbczHj7Faxrz0F+FKG0=
+		H2nxiXEdXlebZQ3n3aoF+/AHLmE=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		zYqB8q0+0fFzq4aMK6WELsu2tjo=
+		Bn/2/PkHyEOnLXooVHwOA7px76E=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		N5Fo/NbbHbczHj7Faxrz0F+FKG0=
+		H2nxiXEdXlebZQ3n3aoF+/AHLmE=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		h5nel69a7NWKMyB+xS75KqeK0sg=
+		/yN5pw+zb7cUdla5TtN2x//WOdw=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4NFGib/hoIWeh+eUMOt7l8UO/Y4=
+		ln9M/6V+EerZyM67/obdB8RBuMc=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Onbe9D6u+zL4BYzBvEWLluRhUlg=
+		FcWkVDLL/J/NQLFS7ij16l0Y9Cc=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		l4KXHANmhGN053dFsKmqBzzTAlE=
+		o97V3Gis6dQCOseWrG4Gvrfr9iU=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Onbe9D6u+zL4BYzBvEWLluRhUlg=
+		FcWkVDLL/J/NQLFS7ij16l0Y9Cc=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TuTui8DqSH3rXfoMeIcLMkheGCE=
+		TQOOE72XZA+VP5T+8JJKbZTiHeE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			px2xoNyGYRwraIzm+g0DzPj0h5HNdlSBCB5tpNnuY8I=
+			cOFDKKbxRpen4QGkaiREYl4LFlyOy1vx5Ykmqv05DMQ=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bmfQ3P9gtXclKFuKNfn6vyIxzArpM3hvaabIm/6HJdI=
+			tRLsDatYhKWsXpqtma/ueUJMsGyO2gPcMCJZfTkIuMw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jWbUif7NHro6uR6N5jWJ/br0bF3ix/N7N5thYRGhyIk=
+			uXEvTNoymQXDp58a/y9MAhVAb+TXr5V+OsVKe6Payps=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bmfQ3P9gtXclKFuKNfn6vyIxzArpM3hvaabIm/6HJdI=
+			tRLsDatYhKWsXpqtma/ueUJMsGyO2gPcMCJZfTkIuMw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S+WQf+n5JtyrfuZ3aZ9FmllPadfb6KTX8G6dKqERwgw=
+			MmZJxUXAoQznzVXgtSgVBat/Vl5Y+KxBxtWdGnfBLgM=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			px2xoNyGYRwraIzm+g0DzPj0h5HNdlSBCB5tpNnuY8I=
+			cOFDKKbxRpen4QGkaiREYl4LFlyOy1vx5Ykmqv05DMQ=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gV2dduZpm7H9pPA+hVxim1JbUHhlkgBky+Z/46koCJI=
+			sxlz6/aFVM0bIwInUSrnb5xBf9u+9fimcdSixbnPRtw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jrmyNDsF11LnMy0oN/wK8F1YQel4D01+Cn9iMyQPxvY=
+			HQXkpye31G6COUpmahs4B4v4DWGZWXLuHyWokhwqafA=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gV2dduZpm7H9pPA+hVxim1JbUHhlkgBky+Z/46koCJI=
+			sxlz6/aFVM0bIwInUSrnb5xBf9u+9fimcdSixbnPRtw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LeeOG+bgaL7wbEDhyOTv7i3GCmrZFSKHJ2i3rrAkgbY=
+			/RkQiB/Nld/OLtpQCHJFE1Hmx37I08KF/72VYv2T7Xc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
