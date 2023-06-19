@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ORY6ii0AfD8XMPxyWrHL2a3KVrA=
+		YcNREmeA2NV+XprW0Om2IlaAINs=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ln9M/6V+EerZyM67/obdB8RBuMc=
+		MNpvPuXha53kBadcdhbyZkadwdQ=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		hSa7dP08Y1DR8ZQ4ZClR94Gw0x0=
+		eCTav0rJCGQ6woZc2hRAalQmWic=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		bc8690g5HrjE6IKueTTKlLVI2Ak=
+		DLlHKoWoKP+Sbztyonpw4ZvMaXM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cOFDKKbxRpen4QGkaiREYl4LFlyOy1vx5Ykmqv05DMQ=
+			hXHkU+VHc/ggD9A76qRgKz4VTFWR1IehcLwT4wxEqJg=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ivXNPgCOdY7awosMUeHWDc32JdZVaFntTRLzVqwqgCc=
+			vegY33wMJJQgi0R8TUL/EVmvLfMdOD7MAljGOHcCgMc=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YpiDaqe9bkBMeib2b5qLCGiYeJhtl7I7/AUoWYG7Xl4=
+			BXsZIphrrIC8KZYlWnzdPK9iNgOV/L5i5uJK+uIkApw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
