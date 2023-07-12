@@ -36,6 +36,15 @@ public enum ConnectivtyError : Swift.Error {
   case NotSupportedConnectivity
   case NetworkError(Swift.String?)
 }
+public enum DelegationLevel {
+  case actions
+  case verbose
+  public static func == (a: NearpayConnectCore.DelegationLevel, b: NearpayConnectCore.DelegationLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public protocol SessoinJobDelegate {
   func sessionJob(didReceiveResultForPurchase result: NearpayConnectCore.JobResult<NearpayConnectCore.PurchaseResult, NearpayConnectCore.PurchaseError>, forJob jobId: Foundation.UUID)
   func sessionJob(didReceiveResultForRefund result: NearpayConnectCore.JobResult<NearpayConnectCore.RefundResult, NearpayConnectCore.RefundError>, forJob jobId: Foundation.UUID)
@@ -73,6 +82,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public var busy: Swift.Bool {
     get
   }
+  public func setDelegationLevel(level: NearpayConnectCore.DelegationLevel)
   @objc override dynamic public init()
   @discardableResult
   public func startPurchaseJob(amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
@@ -432,6 +442,8 @@ public struct Merchant : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+extension NearpayConnectCore.DelegationLevel : Swift.Equatable {}
+extension NearpayConnectCore.DelegationLevel : Swift.Hashable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.Equatable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.Hashable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.RawRepresentable {}
