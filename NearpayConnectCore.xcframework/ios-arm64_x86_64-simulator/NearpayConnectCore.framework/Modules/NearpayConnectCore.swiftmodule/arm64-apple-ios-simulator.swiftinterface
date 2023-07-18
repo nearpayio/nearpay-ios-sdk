@@ -35,6 +35,7 @@ public enum ConnectivtyError : Swift.Error {
   case NoPairedDevice
   case NotSupportedConnectivity
   case NetworkError(Swift.String?)
+  public func message() -> Swift.String
 }
 public enum DelegationLevel {
   case actions
@@ -143,6 +144,7 @@ public enum RefundError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String?)
+  case Canceled
   public func message() -> Swift.String
 }
 public struct RefundPayload : Swift.Codable {
@@ -215,6 +217,7 @@ public enum ReversalError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String?)
+  case Canceled
   public func message() -> Swift.String
 }
 public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
@@ -254,6 +257,7 @@ public enum PurchaseError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String)
+  case Canceled
   public func message() -> Swift.String
 }
 public struct PurchasePayload : Swift.Codable {
@@ -405,6 +409,7 @@ public enum ReconciliationError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String)
+  case Canceled
   public func message() -> Swift.String
 }
 public enum ReconcileOutcomes : Swift.Int, Swift.Codable {

@@ -878,6 +878,27 @@
             "usr": "s:18NearpayConnectCore16ConnectivtyErrorO07NetworkE0yACSSSgcACmF",
             "mangledName": "$s18NearpayConnectCore16ConnectivtyErrorO07NetworkE0yACSSSgcACmF",
             "moduleName": "NearpayConnectCore"
+          },
+          {
+            "kind": "Function",
+            "name": "message",
+            "printedName": "message()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18NearpayConnectCore16ConnectivtyErrorO7messageSSyF",
+            "mangledName": "$s18NearpayConnectCore16ConnectivtyErrorO7messageSSyF",
+            "moduleName": "NearpayConnectCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -3864,6 +3885,43 @@
             "moduleName": "NearpayConnectCore"
           },
           {
+            "kind": "Var",
+            "name": "Canceled",
+            "printedName": "Canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NearpayConnectCore.RefundError.Type) -> NearpayConnectCore.RefundError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RefundError",
+                    "printedName": "NearpayConnectCore.RefundError",
+                    "usr": "s:18NearpayConnectCore11RefundErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NearpayConnectCore.RefundError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RefundError",
+                        "printedName": "NearpayConnectCore.RefundError",
+                        "usr": "s:18NearpayConnectCore11RefundErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18NearpayConnectCore11RefundErrorO8CanceledyA2CmF",
+            "mangledName": "$s18NearpayConnectCore11RefundErrorO8CanceledyA2CmF",
+            "moduleName": "NearpayConnectCore"
+          },
+          {
             "kind": "Function",
             "name": "message",
             "printedName": "message()",
@@ -6762,6 +6820,43 @@
             "moduleName": "NearpayConnectCore"
           },
           {
+            "kind": "Var",
+            "name": "Canceled",
+            "printedName": "Canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NearpayConnectCore.ReversalError.Type) -> NearpayConnectCore.ReversalError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReversalError",
+                    "printedName": "NearpayConnectCore.ReversalError",
+                    "usr": "s:18NearpayConnectCore13ReversalErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NearpayConnectCore.ReversalError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReversalError",
+                        "printedName": "NearpayConnectCore.ReversalError",
+                        "usr": "s:18NearpayConnectCore13ReversalErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18NearpayConnectCore13ReversalErrorO8CanceledyA2CmF",
+            "mangledName": "$s18NearpayConnectCore13ReversalErrorO8CanceledyA2CmF",
+            "moduleName": "NearpayConnectCore"
+          },
+          {
             "kind": "Function",
             "name": "message",
             "printedName": "message()",
@@ -7910,6 +8005,43 @@
             "declKind": "EnumElement",
             "usr": "s:18NearpayConnectCore13PurchaseErrorO13GENERAL_ERRORyACSScACmF",
             "mangledName": "$s18NearpayConnectCore13PurchaseErrorO13GENERAL_ERRORyACSScACmF",
+            "moduleName": "NearpayConnectCore"
+          },
+          {
+            "kind": "Var",
+            "name": "Canceled",
+            "printedName": "Canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NearpayConnectCore.PurchaseError.Type) -> NearpayConnectCore.PurchaseError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PurchaseError",
+                    "printedName": "NearpayConnectCore.PurchaseError",
+                    "usr": "s:18NearpayConnectCore13PurchaseErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NearpayConnectCore.PurchaseError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PurchaseError",
+                        "printedName": "NearpayConnectCore.PurchaseError",
+                        "usr": "s:18NearpayConnectCore13PurchaseErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18NearpayConnectCore13PurchaseErrorO8CanceledyA2CmF",
+            "mangledName": "$s18NearpayConnectCore13PurchaseErrorO8CanceledyA2CmF",
             "moduleName": "NearpayConnectCore"
           },
           {
@@ -14195,6 +14327,43 @@
             "moduleName": "NearpayConnectCore"
           },
           {
+            "kind": "Var",
+            "name": "Canceled",
+            "printedName": "Canceled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(NearpayConnectCore.ReconciliationError.Type) -> NearpayConnectCore.ReconciliationError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ReconciliationError",
+                    "printedName": "NearpayConnectCore.ReconciliationError",
+                    "usr": "s:18NearpayConnectCore19ReconciliationErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "NearpayConnectCore.ReconciliationError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReconciliationError",
+                        "printedName": "NearpayConnectCore.ReconciliationError",
+                        "usr": "s:18NearpayConnectCore19ReconciliationErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18NearpayConnectCore19ReconciliationErrorO8CanceledyA2CmF",
+            "mangledName": "$s18NearpayConnectCore19ReconciliationErrorO8CanceledyA2CmF",
+            "moduleName": "NearpayConnectCore"
+          },
+          {
             "kind": "Function",
             "name": "message",
             "printedName": "message()",
@@ -16068,1149 +16237,1212 @@
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 591,
+      "length": 26,
+      "value": "\".ConnectionFailedToRetry\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 671,
+      "length": 21,
+      "value": "\".RemoteDeviceIsBusy\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 745,
+      "length": 20,
+      "value": "\".UnautherizedReply\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 821,
+      "length": 23,
+      "value": "\".RemoteDeviceIsPaused\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 894,
+      "length": 17,
+      "value": "\".NoPairedDevice\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 971,
+      "length": 27,
+      "value": "\".NotSupportedConnectivity\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 1059,
+      "length": 43,
+      "value": "\".NotSupportedConnectivity \""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 1098,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 1101,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 9472,
+      "offset": 10121,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 9533,
+      "offset": 10182,
       "length": 29,
       "value": "\"nearpayconnectcore.settings\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 10349,
+      "offset": 10998,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 10458,
+      "offset": 11107,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 12458,
+      "offset": 13107,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 12487,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "IntegerLiteral",
-      "offset": 12514,
-      "length": 1,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12537,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "StringLiteral",
-      "offset": 12970,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14942,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "BooleanLiteral",
-      "offset": 14971,
+      "offset": 13136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 14998,
+      "offset": 13163,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 15021,
+      "offset": 13186,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 15335,
+      "offset": 13619,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 17159,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
-      "kind": "BooleanLiteral",
-      "offset": 17190,
+      "offset": 15591,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 17219,
+      "offset": 15620,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 17247,
+      "offset": 15647,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 17270,
+      "offset": 15670,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 17628,
+      "offset": 15984,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17808,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17839,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17868,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17896,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "BooleanLiteral",
+      "offset": 17919,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
+      "kind": "StringLiteral",
+      "offset": 18277,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 17881,
+      "offset": 18530,
       "length": 20,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 17897,
+      "offset": 18546,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 17900,
+      "offset": 18549,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 19026,
+      "offset": 19675,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 19053,
+      "offset": 19702,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 19076,
+      "offset": 19725,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 20652,
+      "offset": 21301,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 20679,
+      "offset": 21328,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 20702,
+      "offset": 21351,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21181,
+      "offset": 21830,
       "length": 19,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21196,
+      "offset": 21845,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21199,
+      "offset": 21848,
       "length": 3,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 21783,
+      "offset": 22432,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21844,
+      "offset": 22493,
       "length": 25,
       "value": "\"ws:\/\/\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21855,
+      "offset": 22504,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 21863,
+      "offset": 22512,
       "length": 1,
       "value": "\"\/pair\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22152,
+      "offset": 22801,
       "length": 41,
       "value": "\"success websocket connection \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22192,
+      "offset": 22841,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22302,
+      "offset": 22951,
       "length": 6,
       "value": "\"busy\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22366,
+      "offset": 23015,
       "length": 24,
       "value": "\"received Android  Busy\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22830,
+      "offset": 23479,
       "length": 7,
       "value": "\"uuid:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22896,
+      "offset": 23545,
       "length": 41,
       "value": "\"received Android  parir uuid \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 22936,
+      "offset": 23585,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23008,
+      "offset": 23657,
       "length": 10,
       "value": "\"\/connect\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23104,
+      "offset": 23753,
       "length": 3,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23313,
+      "offset": 23962,
       "length": 39,
       "value": "\"failed to connect ProxySDK \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23351,
+      "offset": 24000,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23381,
+      "offset": 24030,
       "length": 47,
       "value": "\"Compatibility switch to connectSDK \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 23427,
+      "offset": 24076,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 23752,
+      "offset": 24385,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24045,
+      "offset": 24678,
       "length": 35,
       "value": "\"ws:\/\/\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24056,
+      "offset": 24689,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24064,
+      "offset": 24697,
       "length": 1,
       "value": "\"\/forget\/\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24079,
+      "offset": 24712,
       "length": 4,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24373,
+      "offset": 25006,
       "length": 42,
       "value": "\"success websocket forget sent \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24414,
+      "offset": 25047,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24500,
+      "offset": 25133,
       "length": 36,
       "value": "\"failed to remote forget \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 24535,
+      "offset": 25168,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 25568,
+      "offset": 26216,
       "length": 18,
       "value": "\"Result Dismissed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 25739,
+      "offset": 26387,
       "length": 18,
       "value": "\"Result Dismissed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 25914,
+      "offset": 26562,
       "length": 18,
       "value": "\"Result Dismissed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 26096,
+      "offset": 26744,
       "length": 18,
       "value": "\"Result Dismissed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 28352,
+      "offset": 28988,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 28360,
+      "offset": 28996,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 28502,
+      "offset": 29138,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 28510,
+      "offset": 29146,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 29425,
+      "offset": 30061,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 29433,
+      "offset": 30069,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 30545,
+      "offset": 31181,
       "length": 8,
       "value": "\"v1.0.5\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 30617,
+      "offset": 31253,
       "length": 8,
       "value": "\"stable\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 30942,
+      "offset": 31578,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 30968,
+      "offset": 31604,
       "length": 55,
       "value": "\"connecting data: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 30993,
+      "offset": 31629,
       "length": 1,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31005,
+      "offset": 31641,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31013,
+      "offset": 31649,
       "length": 1,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31022,
+      "offset": 31658,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31092,
+      "offset": 31728,
       "length": 17,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31100,
+      "offset": 31736,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 31108,
+      "offset": 31744,
       "length": 42,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 32662,
+      "offset": 33286,
       "length": 53,
       "value": "\"can't start new Job while you still have one active\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 32897,
+      "offset": 33521,
       "length": 25,
       "value": "\"already have active Job\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 33076,
+      "offset": 33700,
       "length": 25,
       "value": "\"already have active Job\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 33259,
+      "offset": 33883,
       "length": 25,
       "value": "\"already have active Job\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 33449,
+      "offset": 34073,
       "length": 25,
       "value": "\"already have active Job\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 33638,
+      "offset": 34262,
       "length": 41,
       "value": "\"Error: to start job no connected device\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 33888,
+      "offset": 34512,
       "length": 21,
       "value": "\"No connected device\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 34063,
+      "offset": 34687,
       "length": 21,
       "value": "\"No connected device\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 34242,
+      "offset": 34866,
       "length": 21,
       "value": "\"No connected device\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 34428,
+      "offset": 35052,
       "length": 21,
       "value": "\"No connected device\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 34709,
+      "offset": 35333,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 34723,
+      "offset": 35347,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 34793,
+      "offset": 35417,
       "length": 15,
       "value": "\"time is fired\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35062,
+      "offset": 35686,
       "length": 25,
       "value": "\"Job timeout no response\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35241,
+      "offset": 35865,
       "length": 25,
       "value": "\"Job timeout no response\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35424,
+      "offset": 36048,
       "length": 25,
       "value": "\"Job timeout no response\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35614,
+      "offset": 36238,
       "length": 25,
       "value": "\"Job timeout no response\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35833,
+      "offset": 36457,
       "length": 44,
       "value": "\"Response Received: len=\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 35870,
+      "offset": 36494,
       "length": 5,
       "value": "\" bytes\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 35974,
+      "offset": 36598,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36540,
+      "offset": 37164,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36569,
+      "offset": 37193,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36728,
+      "offset": 37352,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36757,
+      "offset": 37381,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36920,
+      "offset": 37544,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 36949,
+      "offset": 37573,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 37119,
+      "offset": 37743,
       "length": 30,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 37148,
+      "offset": 37772,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 38744,
+      "offset": 39368,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 39098,
+      "offset": 39722,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 39456,
+      "offset": 40460,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 39802,
+      "offset": 40866,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 39996,
+      "offset": 41060,
       "length": 32,
       "value": "\"Decoding Error: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 40027,
+      "offset": 41091,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 41603,
+      "offset": 42667,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 41933,
+      "offset": 42997,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 42267,
+      "offset": 43683,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 42589,
+      "offset": 44031,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 42742,
+      "offset": 44184,
       "length": 32,
       "value": "\"Decoding Error: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 42773,
+      "offset": 44215,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 44155,
+      "offset": 45597,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 44510,
+      "offset": 45952,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 44869,
+      "offset": 46663,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 45216,
+      "offset": 47040,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 45389,
+      "offset": 47213,
       "length": 32,
       "value": "\"Decoding Error: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 45420,
+      "offset": 47244,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 46983,
+      "offset": 48807,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 47324,
+      "offset": 49148,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 47669,
+      "offset": 49881,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 48002,
+      "offset": 50265,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 48155,
+      "offset": 50418,
       "length": 32,
       "value": "\"Decoding Error: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 48186,
+      "offset": 50449,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 48579,
+      "offset": 50842,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "BooleanLiteral",
-      "offset": 49466,
+      "offset": 51729,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 49508,
+      "offset": 51771,
       "length": 19,
       "value": "\"connectivity.data\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 49976,
+      "offset": 52239,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 50169,
+      "offset": 52432,
       "length": 37,
       "value": "\"Error decodeing pref \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 50205,
+      "offset": 52468,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 50315,
+      "offset": 52578,
       "length": 14,
       "value": "\"No key found\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 51920,
+      "offset": 54163,
       "length": 21,
       "value": "\"Bluetooth Connected\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 52893,
+      "offset": 55120,
       "length": 67,
       "value": "\"receiveid data: \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 52959,
+      "offset": 55186,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53026,
+      "offset": 55253,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53032,
+      "offset": 55259,
       "length": 11,
       "value": "\"confirmed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53085,
+      "offset": 55312,
       "length": 28,
       "value": "\"received Android confirmed\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 53252,
+      "offset": 55479,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53445,
+      "offset": 55672,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53451,
+      "offset": 55678,
       "length": 7,
       "value": "\"Pause\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53660,
+      "offset": 55887,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53666,
+      "offset": 55893,
       "length": 15,
       "value": "\"PausedAlready\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53979,
+      "offset": 56206,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 53985,
+      "offset": 56212,
       "length": 8,
       "value": "\"Resume\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 54195,
+      "offset": 56422,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 54201,
+      "offset": 56428,
       "length": 14,
       "value": "\"unauthorized\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 54257,
+      "offset": 56484,
       "length": 24,
       "value": "\"received Android  Busy\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 54684,
+      "offset": 56910,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 54690,
+      "offset": 56916,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 55153,
+      "offset": 57378,
       "length": 26,
       "value": "\"did throw error \""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 55178,
+      "offset": 57403,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 55573,
+      "offset": 57798,
       "length": 12,
       "value": "\"ping error\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "IntegerLiteral",
-      "offset": 56368,
+      "offset": 58593,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 57327,
+      "offset": 59552,
       "length": 8,
       "value": "\"%02hhx\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 57687,
+      "offset": 59912,
       "length": 39,
       "value": "\"receiveid URLSessionWebSocketDelegate\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 57889,
+      "offset": 60114,
       "length": 38,
       "value": "\"did URLSessionWebSocketDelegate open\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Connectivity.swift",
       "kind": "StringLiteral",
-      "offset": 58125,
+      "offset": 60350,
       "length": 39,
       "value": "\"did URLSessionWebSocketDelegate close\""
     },
@@ -17343,231 +17575,245 @@
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 674,
+      "offset": 696,
       "length": 20,
       "value": "\"REJECTED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 693,
+      "offset": 715,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 753,
+      "offset": 775,
       "length": 23,
       "value": "\"AUTH_FAILED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 775,
+      "offset": 797,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 831,
+      "offset": 853,
       "length": 19,
       "value": "\"INVALID:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
-      "offset": 849,
+      "offset": 871,
       "length": 1,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
-      "kind": "StringLiteral",
-      "offset": 911,
-      "length": 23,
-      "value": "\"ERROR:\""
-    },
-    {
-      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
-      "kind": "StringLiteral",
-      "offset": 930,
-      "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
       "kind": "StringLiteral",
       "offset": 933,
+      "length": 23,
+      "value": "\"ERROR:\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
+      "kind": "StringLiteral",
+      "offset": 952,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
+      "kind": "StringLiteral",
+      "offset": 955,
       "length": 1,
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/RefundJob.swift",
+      "kind": "StringLiteral",
+      "offset": 1000,
+      "length": 10,
+      "value": "\"Canceled\""
+    },
+    {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 385,
+      "offset": 403,
       "length": 20,
       "value": "\"REJECTED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 404,
+      "offset": 422,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 464,
+      "offset": 482,
       "length": 23,
       "value": "\"AUTH_FAILED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 486,
+      "offset": 504,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 542,
+      "offset": 560,
       "length": 19,
       "value": "\"INVALID:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 578,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 640,
       "length": 23,
       "value": "\"ERROR:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 641,
+      "offset": 659,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "StringLiteral",
-      "offset": 644,
+      "offset": 662,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 10,
+      "value": "\"Canceled\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 736,
+      "offset": 808,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 758,
+      "offset": 830,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 783,
+      "offset": 855,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 804,
+      "offset": 876,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 831,
+      "offset": 903,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 736,
+      "offset": 808,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 758,
+      "offset": 830,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 783,
+      "offset": 855,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 804,
+      "offset": 876,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 831,
+      "offset": 903,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 736,
+      "offset": 808,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 758,
+      "offset": 830,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 783,
+      "offset": 855,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 804,
+      "offset": 876,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReversalJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 831,
+      "offset": 903,
       "length": 1,
       "value": "5"
     },
@@ -17700,58 +17946,65 @@
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 717,
+      "offset": 735,
       "length": 20,
       "value": "\"REJECTED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 736,
+      "offset": 754,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 796,
+      "offset": 814,
       "length": 23,
       "value": "\"AUTH_FAILED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 818,
+      "offset": 836,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 874,
+      "offset": 892,
       "length": 19,
       "value": "\"INVALID:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 892,
+      "offset": 910,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 954,
+      "offset": 972,
       "length": 17,
       "value": "\"ERROR:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
       "kind": "StringLiteral",
-      "offset": 970,
+      "offset": 988,
       "length": 1,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/PurchaseJob.swift",
+      "kind": "StringLiteral",
+      "offset": 1033,
+      "length": 10,
+      "value": "\"Canceled\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/ConnectivitySetting.swift",
@@ -18638,182 +18891,189 @@
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 520,
+      "offset": 538,
       "length": 20,
       "value": "\"REJECTED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 539,
+      "offset": 557,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 599,
+      "offset": 617,
       "length": 23,
       "value": "\"AUTH_FAILED:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 639,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 677,
+      "offset": 695,
       "length": 19,
       "value": "\"INVALID:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 695,
+      "offset": 713,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 757,
+      "offset": 775,
       "length": 17,
       "value": "\"ERROR:\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "StringLiteral",
-      "offset": 773,
-      "length": 1,
+      "offset": 791,
+      "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
+      "kind": "StringLiteral",
+      "offset": 848,
+      "length": 10,
+      "value": "\"Canceled\""
+    },
+    {
+      "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 861,
+      "offset": 945,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 887,
+      "offset": 971,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 909,
+      "offset": 993,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 934,
+      "offset": 1018,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 955,
+      "offset": 1039,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 982,
+      "offset": 1066,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 861,
+      "offset": 945,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 887,
+      "offset": 971,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 909,
+      "offset": 993,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 934,
+      "offset": 1018,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 955,
+      "offset": 1039,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 982,
+      "offset": 1066,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 861,
+      "offset": 945,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 887,
+      "offset": 971,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 909,
+      "offset": 993,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 934,
+      "offset": 1018,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 955,
+      "offset": 1039,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/rayed\/nearpay\/ios_land\/NearpayConnectCore\/Sources\/NearpayConnectCore\/Models\/ReconciliationJob.swift",
       "kind": "IntegerLiteral",
-      "offset": 982,
+      "offset": 1066,
       "length": 1,
       "value": "6"
     }

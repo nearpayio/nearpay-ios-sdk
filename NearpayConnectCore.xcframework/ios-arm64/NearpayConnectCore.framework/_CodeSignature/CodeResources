@@ -18,23 +18,23 @@
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		8TgKBHDznbCAan90bhNPWZCtAh4=
+		Uy9CzCJD2spJT7s8qncMI+MX/cg=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		AhZbpjNYrpsFSXeKXmPRCKlC5sk=
+		z8ZRrEcMCgnqX7S9PiQ0r5XK6jE=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		hlTbcucIEp6KRGOiuK4w8JS07UQ=
+		jl7IpYEVRbWRLYDVRDMeYgy9zRI=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		AhZbpjNYrpsFSXeKXmPRCKlC5sk=
+		z8ZRrEcMCgnqX7S9PiQ0r5XK6jE=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		vUS/TT0H2gEmYWvUQOTbsXXmKyM=
+		88lv1It1ZPwO0CCdbi2tVEmrzlY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			seCVhzApwu1mT9zb1KBXVmf3+waVAURNQuIs0v70H9U=
+			Of0qLf4j8arYoMhtnnyVY717fK9mt1nf2/eFdl3BeLs=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MpQ7c2Q5Myd+cCnGY3fA+xFTieSICbpuSY4X9FjotIw=
+			VJxHnYXmoD4snEwO36F147pvJ0DlD8AskzVk/nsqXHg=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DiQ7fCB+rMzSClgPDU0BXW4qNSSSK5eSUuo4i8DMKbA=
+			TP3X8bl5QICMZtcJLMNmzaazaVq2FelpxdrPqxMmsoQ=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MpQ7c2Q5Myd+cCnGY3fA+xFTieSICbpuSY4X9FjotIw=
+			VJxHnYXmoD4snEwO36F147pvJ0DlD8AskzVk/nsqXHg=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oAB89kJgi09hhEcgrpU6pVfeOTrYIgOhinagXAcT2YU=
+			9xG0QxnaSnHQBNTbka7jH8+5Eszf4dc9rfKO8ZhDh+c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
