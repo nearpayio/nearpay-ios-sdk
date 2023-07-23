@@ -23,6 +23,7 @@ public struct JobMessageResponse : Swift.Codable {
 }
 public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public let status: T
+  public let isNewTransaction: Swift.Bool
   public let transactionReceipts: [NearpayConnectCore.TransactionReceipt]
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -35,6 +36,7 @@ public enum ConnectivtyError : Swift.Error {
   case NoPairedDevice
   case NotSupportedConnectivity
   case NetworkError(Swift.String?)
+  case ConnectionLost
   public func message() -> Swift.String
 }
 public enum DelegationLevel {
@@ -95,7 +97,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   @discardableResult
   public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
   public func recallActiveJob()
-  public func cancelActiveJob()
+  public func cancelActiveJob(withReverse: Swift.Bool = false)
   public func dismissActiveJobResult()
   public func connectLastPairedDevice()
   public func connectLocal(host: Swift.String, port: Swift.Int, timeoutInSeconds: Swift.Int)
@@ -124,11 +126,13 @@ extension NearpayConnectCore.Connectivity : Foundation.URLSessionWebSocketDelega
 }
 public enum RefundOutcomes : Swift.Int, Swift.Codable {
   case APPROVED
-  case DECLIEND
+  case DECLINED
   case REJECTED
   case AUTH_FAILED
   case INVALID
   case GENERAL_ERROR
+  case CANCELED
+  case CANCELED_WITH_REVERSE
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -137,14 +141,15 @@ public enum RefundOutcomes : Swift.Int, Swift.Codable {
 }
 public enum RefundResult {
   case APPROVED([NearpayConnectCore.TransactionReceipt])
-  case DECLIEND([NearpayConnectCore.TransactionReceipt])
+  case DECLINED([NearpayConnectCore.TransactionReceipt])
 }
 public enum RefundError : Swift.Error {
   case REJECTED(Swift.String)
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String?)
-  case Canceled
+  case CANCELED
+  case CANCELED_WITH_REVERSE
   public func message() -> Swift.String
 }
 public struct RefundPayload : Swift.Codable {
@@ -217,7 +222,7 @@ public enum ReversalError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String?)
-  case Canceled
+  case CANCELED
   public func message() -> Swift.String
 }
 public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
@@ -226,6 +231,7 @@ public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
   case AUTH_FAILED
   case INVALID
   case GENERAL_ERROR
+  case CANCELED
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -237,11 +243,13 @@ public struct ReversalFinished {
 }
 public enum PurchaseOutcomes : Swift.Int, Swift.Codable {
   case APPROVED
-  case DECLIEND
+  case DECLINED
   case REJECTED
   case AUTH_FAILED
   case INVALID
   case GENERAL_ERROR
+  case CANCELED
+  case CANCELED_WITH_REVERSE
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -249,15 +257,16 @@ public enum PurchaseOutcomes : Swift.Int, Swift.Codable {
   }
 }
 public enum PurchaseResult {
-  case APPROVED([NearpayConnectCore.TransactionReceipt])
-  case DECLIEND([NearpayConnectCore.TransactionReceipt])
+  case APPROVED(receipts: [NearpayConnectCore.TransactionReceipt], isRestoredResult: Swift.Bool)
+  case DECLINED(receipts: [NearpayConnectCore.TransactionReceipt], isRestoredResult: Swift.Bool)
 }
 public enum PurchaseError : Swift.Error {
   case REJECTED(Swift.String)
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String)
-  case Canceled
+  case CANCELED
+  case CANCELED_WITH_REVERSE
   public func message() -> Swift.String
 }
 public struct PurchasePayload : Swift.Codable {
@@ -409,7 +418,7 @@ public enum ReconciliationError : Swift.Error {
   case AUTH_FAILED(Swift.String)
   case INVALID(Swift.String)
   case GENERAL_ERROR(Swift.String)
-  case Canceled
+  case CANCELED
   public func message() -> Swift.String
 }
 public enum ReconcileOutcomes : Swift.Int, Swift.Codable {
@@ -419,6 +428,7 @@ public enum ReconcileOutcomes : Swift.Int, Swift.Codable {
   case AUTH_FAILED
   case INVALID
   case GENERAL_ERROR
+  case CANCELED
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
