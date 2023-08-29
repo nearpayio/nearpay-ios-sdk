@@ -11,6 +11,31 @@ import Swift
 import SwiftUI
 import _Concurrency
 import _StringProcessing
+public struct ReconciliationList : Swift.Codable {
+  public let total: Swift.Int
+  public var reconciliations: [NearpayConnectCore.ReconciliationItem]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReconciliationItem : Swift.Codable {
+  public let id: Swift.String
+  public let date: Swift.String
+  public let time: Swift.String
+  public let is_balanced: NearpayConnectCore.LocalizationField
+  public let total: Swift.String
+  public let currency: NearpayConnectCore.LocalizationField
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias ReconciliationListResult = NearpayConnectCore.ReconciliationList
+public enum ReconciliationListError : Swift.Error {
+  case FINISHED
+  case AUTHENTICATION_FAILED
+  case INVALID_DEVICE_STATUS
+  case FAILURE_MESSAGE(Swift.String)
+  case GENERAL
+  public func message() -> Swift.String
+}
 public enum JobResult<Result, Failure> where Failure : Swift.Error {
   case result(Result)
   case failure(Failure)
@@ -53,6 +78,8 @@ public protocol SessoinJobDelegate {
   func sessionJob(didReceiveResultForRefund result: NearpayConnectCore.JobResult<NearpayConnectCore.RefundResult, NearpayConnectCore.RefundError>, forJob jobId: Foundation.UUID)
   func sessionJob(didReceiveResultForReversal result: NearpayConnectCore.JobResult<NearpayConnectCore.ReversalFinished, NearpayConnectCore.ReversalError>, forJob jobId: Foundation.UUID)
   func sessionJob(didReceiveResultForReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationResult, NearpayConnectCore.ReconciliationError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForTransactionList result: NearpayConnectCore.JobResult<NearpayConnectCore.TransactionListResult, NearpayConnectCore.TransactionListError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForReconciliationList result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationListResult, NearpayConnectCore.ReconciliationListError>, forJob jobId: Foundation.UUID)
 }
 public protocol ConnectivityConnectDelegate {
   func connectivityConnect(didConnectFor setting: NearpayConnectCore.ConnectivitySetting)
@@ -86,6 +113,7 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
     get
   }
   public func setDelegationLevel(level: NearpayConnectCore.DelegationLevel)
+  public func GenerateUuidFroNextJob() -> Foundation.UUID
   @objc override dynamic public init()
   @discardableResult
   public func startPurchaseJob(amount: Swift.Int, enableReceiptUi: Swift.Bool = true, enableReversal: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
@@ -96,6 +124,10 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func startReversalJob(transactionUUID: Swift.String, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
   @discardableResult
   public func startReconcileJob(adminPin: Swift.String?, enableReceiptUi: Swift.Bool = true, finishTimeOut: Swift.Int = 6, dismissible: Swift.Bool = false) -> Foundation.UUID
+  @discardableResult
+  public func startTransactionListJob(startDate: Foundation.Date, endDate: Foundation.Date = Date(), page: Swift.Int = 0, pageSize: Swift.Int = 5) -> Foundation.UUID
+  @discardableResult
+  public func startReconciliationListJob(startDate: Foundation.Date, endDate: Foundation.Date = Date(), page: Swift.Int = 0, pageSize: Swift.Int = 5) -> Foundation.UUID
   public func recallActiveJob()
   public func cancelActiveJob(withReverse: Swift.Bool = false)
   public func dismissActiveJobResult()
@@ -211,6 +243,49 @@ public struct ReconciliationReceipt : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct TransactionBanner : Swift.Codable {
+  public let uuid: Swift.String
+  public let scheme: Swift.String
+  public let pan: Swift.String
+  public let amount_authorized: Swift.String
+  public let currency: NearpayConnectCore.LocalizationField
+  public let transaction_type: NearpayConnectCore.TransactionBanner.TransactionType
+  public let is_approved: Swift.Bool
+  public let is_reversed: Swift.Bool
+  public let start_date: Swift.String
+  public let start_time: Swift.String
+  public let customer_reference_number: Swift.String?
+  public enum TransactionType : Swift.String, Swift.Codable {
+    case UNDEFINED
+    case PURCHASE
+    case CASH
+    case CASH_DISBURSEMENT
+    case PURCHASE_WITH_CASHBACK
+    case REFUND
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransactionBannerList : Swift.Codable {
+  public let count: Swift.Int
+  public let transactions: [NearpayConnectCore.TransactionBanner]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias TransactionListResult = NearpayConnectCore.TransactionBannerList
+public enum TransactionListError : Swift.Error {
+  case FINISHED
+  case AUTHENTICATION_FAILED
+  case INVALID_DEVICE_STATUS
+  case FAILURE_MESSAGE(Swift.String)
+  case GENERAL
+  public func message() -> Swift.String
+}
 public struct NameField<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
   public let name: NearpayConnectCore.LocalizationField?
   public let id: T?
@@ -240,21 +315,6 @@ public enum ReversaldOutcomes : Swift.Int, Swift.Codable {
 }
 public struct ReversalFinished {
   public let receipts: [NearpayConnectCore.TransactionReceipt]
-}
-public enum PurchaseOutcomes : Swift.Int, Swift.Codable {
-  case APPROVED
-  case DECLINED
-  case REJECTED
-  case AUTH_FAILED
-  case INVALID
-  case GENERAL_ERROR
-  case CANCELED
-  case CANCELED_WITH_REVERSE
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 public enum PurchaseResult {
   case APPROVED(receipts: [NearpayConnectCore.TransactionReceipt], isRestoredResult: Swift.Bool)
@@ -462,12 +522,12 @@ extension NearpayConnectCore.DelegationLevel : Swift.Hashable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.Equatable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.Hashable {}
 extension NearpayConnectCore.RefundOutcomes : Swift.RawRepresentable {}
+extension NearpayConnectCore.TransactionBanner.TransactionType : Swift.Equatable {}
+extension NearpayConnectCore.TransactionBanner.TransactionType : Swift.Hashable {}
+extension NearpayConnectCore.TransactionBanner.TransactionType : Swift.RawRepresentable {}
 extension NearpayConnectCore.ReversaldOutcomes : Swift.Equatable {}
 extension NearpayConnectCore.ReversaldOutcomes : Swift.Hashable {}
 extension NearpayConnectCore.ReversaldOutcomes : Swift.RawRepresentable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.Equatable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.Hashable {}
-extension NearpayConnectCore.PurchaseOutcomes : Swift.RawRepresentable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.Equatable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.Hashable {}
 extension NearpayConnectCore.ConnectivitySetting.ConnectionType : Swift.RawRepresentable {}

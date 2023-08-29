@@ -18,23 +18,23 @@
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		YeY0lDYD4cx+abSjEZVb5NwCA+A=
+		uIT9CO4zXr1dy9EZWweRImW7SuQ=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		g39Xs/UBOazYOR0wD0gOOpYQvv8=
+		ZEmf/zOf8sz9n+4aUm7Jlxj/DTo=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		tSwDUtq9xSXVP5I1CdgcK3tdw3Y=
+		iQlxrec45PNHoZ+SuDXKHfsKov8=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		g39Xs/UBOazYOR0wD0gOOpYQvv8=
+		ZEmf/zOf8sz9n+4aUm7Jlxj/DTo=
 		</data>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		XgfI4a4C0xCV31+Gxeuxc9YUhJY=
+		TslLXuEd0idTZodjLwmQ2LwBtVc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FBfWMdHri3e8gGal7BLog8mN3APA6KqRE1OSjFq8XcI=
+			w5am+aOJgmf+26JBgjp4nY+s+L08JP4yvEJlFgbccN4=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zCFzGSnXHkAyaXpdVESj6cIfOYodEQ7nbAoCNtzvZdM=
+			uoIHivAejR0CAIFlcLFsNJ1AOfkJ0WU7dOPEhmkpOzw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UCuEbwkq8y+yOJI0XhrLojiLAUmRz/DS83EEMIbVpy0=
+			srgCx36kC2jk7oaDx+jyw/nPyCkY5o0dauoDXFO1ptI=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zCFzGSnXHkAyaXpdVESj6cIfOYodEQ7nbAoCNtzvZdM=
+			uoIHivAejR0CAIFlcLFsNJ1AOfkJ0WU7dOPEhmkpOzw=
 			</data>
 		</dict>
 		<key>Modules/NearpayConnectCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IV28m8dXmN+PlN5Y4mT9eXAX205CGGLoUJ9XXKZu8jk=
+			InNc2nC6RSLtWYMii3Fd2CZeygl+SVKEp+gD3cWi04M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
