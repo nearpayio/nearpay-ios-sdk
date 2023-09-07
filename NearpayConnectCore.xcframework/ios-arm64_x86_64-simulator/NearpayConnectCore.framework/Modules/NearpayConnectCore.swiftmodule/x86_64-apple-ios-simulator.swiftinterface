@@ -21,7 +21,7 @@ public struct ReconciliationItem : Swift.Codable {
   public let id: Swift.String
   public let date: Swift.String
   public let time: Swift.String
-  public let is_balanced: NearpayConnectCore.LocalizationField
+  public let is_balanced: NearpayConnectCore.LabelField<Swift.Bool>
   public let total: Swift.String
   public let currency: NearpayConnectCore.LocalizationField
   public func encode(to encoder: any Swift.Encoder) throws
@@ -29,7 +29,6 @@ public struct ReconciliationItem : Swift.Codable {
 }
 public typealias ReconciliationListResult = NearpayConnectCore.ReconciliationList
 public enum ReconciliationListError : Swift.Error {
-  case FINISHED
   case AUTHENTICATION_FAILED
   case INVALID_DEVICE_STATUS
   case FAILURE_MESSAGE(Swift.String)
@@ -53,6 +52,14 @@ public struct TransactionJobReceiptResponse<T> : Swift.Codable where T : Swift.D
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum GetReconciliationErrors : Swift.Error {
+  case AUTHENTICATION_FAILED
+  case INVALID_DEVICE_STATUS
+  case FAILURE_MESSAGE(Swift.String)
+  case GENERAL
+  public func message() -> Swift.String
+}
+public typealias GetReconciliationResult = NearpayConnectCore.ReconciliationReceipt
 public enum ConnectivtyError : Swift.Error {
   case ConnectionFailedToRetry
   case RemoteDeviceIsBusy
@@ -80,6 +87,8 @@ public protocol SessoinJobDelegate {
   func sessionJob(didReceiveResultForReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationResult, NearpayConnectCore.ReconciliationError>, forJob jobId: Foundation.UUID)
   func sessionJob(didReceiveResultForTransactionList result: NearpayConnectCore.JobResult<NearpayConnectCore.TransactionListResult, NearpayConnectCore.TransactionListError>, forJob jobId: Foundation.UUID)
   func sessionJob(didReceiveResultForReconciliationList result: NearpayConnectCore.JobResult<NearpayConnectCore.ReconciliationListResult, NearpayConnectCore.ReconciliationListError>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForGetTransaction result: NearpayConnectCore.JobResult<NearpayConnectCore.GetTransactionResult, NearpayConnectCore.GetTransactionErrors>, forJob jobId: Foundation.UUID)
+  func sessionJob(didReceiveResultForGetReconciliation result: NearpayConnectCore.JobResult<NearpayConnectCore.GetReconciliationResult, NearpayConnectCore.GetReconciliationErrors>, forJob jobId: Foundation.UUID)
 }
 public protocol ConnectivityConnectDelegate {
   func connectivityConnect(didConnectFor setting: NearpayConnectCore.ConnectivitySetting)
@@ -128,6 +137,10 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public func startTransactionListJob(startDate: Foundation.Date, endDate: Foundation.Date = Date(), page: Swift.Int = 0, pageSize: Swift.Int = 5) -> Foundation.UUID
   @discardableResult
   public func startReconciliationListJob(startDate: Foundation.Date, endDate: Foundation.Date = Date(), page: Swift.Int = 0, pageSize: Swift.Int = 5) -> Foundation.UUID
+  @discardableResult
+  public func startGetTransactionJob(transactionUUID: Swift.String) -> Foundation.UUID
+  @discardableResult
+  public func startGetReconcilationJob(reconciliationUUID: Swift.String) -> Foundation.UUID
   public func recallActiveJob()
   public func cancelActiveJob(withReverse: Swift.Bool = false)
   public func dismissActiveJobResult()
@@ -279,7 +292,6 @@ public struct TransactionBannerList : Swift.Codable {
 }
 public typealias TransactionListResult = NearpayConnectCore.TransactionBannerList
 public enum TransactionListError : Swift.Error {
-  case FINISHED
   case AUTHENTICATION_FAILED
   case INVALID_DEVICE_STATUS
   case FAILURE_MESSAGE(Swift.String)
@@ -368,6 +380,14 @@ public struct ConnectivitySetting : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public enum GetTransactionErrors : Swift.Error {
+  case AUTHENTICATION_FAILED
+  case INVALID_DEVICE_STATUS
+  case FAILURE_MESSAGE(Swift.String)
+  case GENERAL
+  public func message() -> Swift.String
+}
+public typealias GetTransactionResult = [NearpayConnectCore.TransactionReceipt]
 public struct LocalizationField : Swift.Codable {
   public let arabic: Swift.String?
   public let english: Swift.String?
