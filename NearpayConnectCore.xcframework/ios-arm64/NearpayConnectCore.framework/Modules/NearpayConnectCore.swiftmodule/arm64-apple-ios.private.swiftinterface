@@ -97,6 +97,7 @@ public protocol ConnectivityConnectDelegate {
   func connectivityConnect(didRetryToConnectFor setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didPause setting: NearpayConnectCore.ConnectivitySetting)
   func connectivityConnect(didResume setting: NearpayConnectCore.ConnectivitySetting)
+  func connectivityConnect(didHeartBeatFor setting: NearpayConnectCore.ConnectivitySetting, isPing: Swift.Bool)
 }
 @objc @_inheritsConvenienceInitializers @available(iOS 13.0, macOS 10.15, *)
 open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
@@ -159,6 +160,9 @@ open class Connectivity : ObjectiveC.NSObject, Foundation.ObservableObject {
   public static func saveSetting(setting: NearpayConnectCore.ConnectivitySetting)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
+}
+extension NearpayConnectCore.ConnectivityConnectDelegate {
+  public func connectivityConnect(didHeartBeatFor setting: NearpayConnectCore.ConnectivitySetting, isPing: Swift.Bool)
 }
 extension Foundation.Data {
   public func hexEncodedString() -> Swift.String
