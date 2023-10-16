@@ -61,7 +61,7 @@ public enum GetReconciliationErrors : Swift.Error {
   public func message() -> Swift.String
 }
 public typealias GetReconciliationResult = NearpayConnectCore.ReconciliationReceipt
-public enum ConnectivtyError : Swift.Error {
+public enum ConnectivtyError : Swift.Error, Swift.Equatable {
   case connectionFailedToRetry
   case remoteDeviceIsBusy
   case unautherizedReply
@@ -72,6 +72,7 @@ public enum ConnectivtyError : Swift.Error {
   case connectionLost
   case alreadyPaired
   public func message() -> Swift.String
+  public static func == (a: NearpayConnectCore.ConnectivtyError, b: NearpayConnectCore.ConnectivtyError) -> Swift.Bool
 }
 public enum DelegationLevel {
   case actions
