@@ -22929,28 +22929,14 @@
     {
       "filePath": "\/Users\/mohammedalsharif\/nearpay-connect-sdk-ios\/Sources\/NearpayConnectCore\/Core\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 144,
-      "length": 24,
-      "value": "\"core.debugable \""
-    },
-    {
-      "filePath": "\/Users\/mohammedalsharif\/nearpay-connect-sdk-ios\/Sources\/NearpayConnectCore\/Core\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 167,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/mohammedalsharif\/nearpay-connect-sdk-ios\/Sources\/NearpayConnectCore\/Core\/Utils.swift",
-      "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 661,
       "length": 18,
       "value": "\"IP Address Queue\""
     },
     {
       "filePath": "\/Users\/mohammedalsharif\/nearpay-connect-sdk-ios\/Sources\/NearpayConnectCore\/Core\/Utils.swift",
       "kind": "StringLiteral",
-      "offset": 833,
+      "offset": 829,
       "length": 2,
       "value": "\"\""
     },
